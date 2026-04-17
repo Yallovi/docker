@@ -1,0 +1,17 @@
+version: "3"
+services:
+  api:
+    image: demo4
+    container_name: my-test-name
+    ports:
+      - 3000:3000
+    networks:
+      - my-network
+    volumes:
+      - data:/opt/app/data
+
+networks:
+  my-network:
+
+volumes:
+  data:
